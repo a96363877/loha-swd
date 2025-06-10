@@ -256,9 +256,9 @@ function UserStatus({ userId }: { userId: string }) {
                     <td className="px-4 py-3">
                       <div className="flex items-center gap-2">
                         <div className="w-8 h-8 bg-blue-500 rounded-full flex items-center justify-center text-sm font-medium">
-                          {notification?.personalInfo?.fullName?.charAt(0) || "N"}
+                          {notification?.fullName?.charAt(0) || "N"}
                         </div>
-                        <span className="font-medium">{notification?.personalInfo?.fullName || "غير محدد"}</span>
+                        <span className="font-medium">{notification?.fullName || "غير محدد"}</span>
                       </div>
                     </td>
                     <td className="px-4 py-3">
@@ -266,6 +266,7 @@ function UserStatus({ userId }: { userId: string }) {
                         <div
                           className={`w-2 h-2 rounded-full ${notification.isOnline ? "bg-green-400" : "bg-gray-400"}`}
                         ></div>
+                      
                          <UserStatus userId={notification.id}/>
                       </div>
                     </td>

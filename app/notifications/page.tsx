@@ -45,7 +45,9 @@ interface Notification {
   hasCardInfo: boolean
   currentPage: string
   createdDate: string
-  notificationCount: number
+  notificationCount: number  
+    fullName?: string
+
   isOnline?: boolean
   country?: string
   personalInfo?: {

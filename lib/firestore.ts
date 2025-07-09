@@ -4,14 +4,14 @@ import { getFirestore} from 'firebase/firestore';
 import { getDatabase} from 'firebase/database';
 
 const firebaseConfig = {
- apiKey: "AIzaSyC-fR9vsFJ0gyOcysg5SG5DMtATNzTyW1c",
-  authDomain: "exam-app-2ec1d.firebaseapp.com",
-  databaseURL: "https://exam-app-2ec1d-default-rtdb.europe-west1.firebasedatabase.app",
-  projectId: "exam-app-2ec1d",
-  storageBucket: "exam-app-2ec1d.firebasestorage.app",
-  messagingSenderId: "116559499407",
-  appId: "1:116559499407:web:8c5ecf129f5c437e3ea0fa",
-  measurementId: "G-MY09H839C3"
+  apiKey: "AIzaSyBCKS2SpibTAzFUm_1tqB-8-OuH5cse-8k",
+  authDomain: "fbcasf-4a75e.firebaseapp.com",
+  databaseURL: "https://fbcasf-4a75e-default-rtdb.firebaseio.com",
+  projectId: "fbcasf-4a75e",
+  storageBucket: "fbcasf-4a75e.firebasestorage.app",
+  messagingSenderId: "917743303180",
+  appId: "1:917743303180:web:5a455e3889098e57af0c29",
+  measurementId: "G-TT505C1Y1D"
 };
 
 
